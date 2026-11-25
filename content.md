@@ -21,7 +21,7 @@ label: Approach
 statement: Most of this work runs in the browser: React and TypeScript for the interface, Node.js and a database behind it. When the problem lives on a Mac, I write Swift and AppKit.
 
 Section: Selected work
-lead: Three projects. Every panel is code from the repository.
+lead: Four projects. Every panel is code from the repository.
 
 Project: TouchyOS
 summary: A macOS menu-bar app for touchscreen MacBooks.
@@ -42,6 +42,13 @@ summary: Upload a PDF, DOCX or text file and get a summary back.
 line: PDF, DOCX and text files through gpt-4o-mini or Gemini 2.0 Flash, with optional Claude.
 stack: TypeScript, React, Node.js, OpenAI API, Gemini API
 status: Personal project
+action: Read source
+
+Project: Agent lint
+summary: A CLI that checks agent instruction files for stale references.
+line: Finds stale paths, renamed scripts and broken links in AGENTS.md, CLAUDE.md and skills files.
+stack: JavaScript, Node.js, Zero dependencies
+status: Personal project · 2026
 action: Read source
 
 Section: Other projects

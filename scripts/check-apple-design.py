@@ -61,6 +61,8 @@ required = [
     'Work together', 'Venezuela · Open to remote', 'gpt-4o-mini', 'Gemini 2.0 Flash',
 ]
 check('verified copy intact', all(s in html for s in required))
+check('agent-lint section', 'agent-lint' in html)
+check('agent-lint truthful line', 'stale paths, renamed scripts and broken links' in html)
 
 # Mechanical detector fixes
 check('taller nav', '--nav: 72px' in css and '--nav: 64px' in css)

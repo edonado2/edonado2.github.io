@@ -89,7 +89,7 @@
       <div class="grid grid--top" data-reveal>
         <div class="span-5"><h2 id="work-h">Featured projects</h2></div>
         <div class="span-6 start-7">
-          <p class="t-lead muted">Three projects. Every panel is code from the repository.</p>
+          <p class="t-lead muted">Four projects. Every panel is code from the repository.</p>
           <a class="link" href="https://github.com/edonado2">See GitHub</a>
         </div>
       </div>
@@ -245,6 +245,37 @@
 <span class="ui-code__ln">}</span>
 <span class="ui-code__ln">  model: process.env.<span class="f">OPENAI_MODEL</span> || <span class="s">'gpt-4o-mini'</span>,</span>
 <span class="ui-code__ln">  model: <span class="s">'gemini-2.0-flash'</span>,</span></code></pre>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section case" id="agent-lint" style="--h: 1" aria-labelledby="agent-lint-h">
+    <div class="wrap"><div class="grid grid--top" data-reveal>
+      <div class="span-5 case-copy" data-reveal>
+        <h2 id="agent-lint-h">Agent lint</h2>
+        <p class="t-lead">A CLI that checks agent instruction files for stale references.</p>
+        <p class="case-line">Finds stale paths, renamed scripts and broken links in AGENTS.md, CLAUDE.md and skills files.</p>
+        <p class="stack"><span>JavaScript</span><span>Node.js</span><span>Zero dependencies</span></p>
+        <p class="t-small muted">Personal project · 2026</p>
+        <a class="link" href="https://github.com/edonado2/agent-lint">Read source</a>
+      </div>
+      <div class="span-6 start-7">
+        <div class="ui ui-panel ui-code case-code" data-reveal role="img" aria-label="JavaScript excerpt from the agent-lint missing-path rule" data-ly-steps="500" data-ly-hold="1000">
+          <div class="ui-code__tabs"><span class="ui-code__tab is-on"><i class="ui-code__lang">JS</i>rules.js</span></div>
+          <pre class="ui-code__pre"><code><span class="ui-code__ln"><span class="k">export function</span> paths(lines, file, root) {</span>
+<span class="ui-code__ln">  <span class="k">const</span> found = [];</span>
+<span class="ui-code__ln">  lines.forEach((text, index) =&gt; {</span>
+<span class="ui-code__ln">    <span class="k">for</span> (<span class="k">const</span> match <span class="k">of</span> text.matchAll(/`([^`]+)`/g)) {</span>
+<span class="ui-code__ln">      <span class="k">const</span> token = match[1];</span>
+<span class="ui-code__ln">      <span class="k">if</span> (/[*?\[\]:]/.test(token)) <span class="k">continue</span>;</span>
+<span class="ui-code__ln">      <span class="k">if</span> (!token.includes('/') &amp;&amp; !PATH_EXTENSIONS.test(token)) <span class="k">continue</span>;</span>
+<span class="ui-code__ln">      <span class="k">if</span> (existsSync(join(root, token))) <span class="k">continue</span>;</span>
+<span class="ui-code__ln">      found.push(find(file, index + 1, <span class="s">'missing-path'</span>, <span class="s">`path does not exist: ${token}`</span>));</span>
+<span class="ui-code__ln">    }</span>
+<span class="ui-code__ln">  });</span>
+<span class="ui-code__ln">  <span class="k">return</span> found;</span>
+<span class="ui-code__ln">}</span></code></pre>
         </div>
       </div>
     </div></div>
