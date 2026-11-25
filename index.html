@@ -89,7 +89,7 @@
       <div class="grid grid--top" data-reveal>
         <div class="span-5"><h2 id="work-h">Featured projects</h2></div>
         <div class="span-6 start-7">
-          <p class="t-lead muted">Four projects. Every panel is code from the repository.</p>
+          <p class="t-lead muted">Three projects. Every panel is code from the repository.</p>
           <a class="link" href="https://github.com/edonado2">See GitHub</a>
         </div>
       </div>
@@ -104,8 +104,8 @@
                 </div>
                 <div class="ui-win__body">
                   <nav class="ui-win__side" aria-hidden="true">
-                    <span class="ui-win__nav is-on">Featured<em>4</em></span>
-                    <span class="ui-win__nav">Also built<em>3</em></span>
+                    <span class="ui-win__nav is-on">Featured<em>3</em></span>
+                    <span class="ui-win__nav">Also built<em>1</em></span>
                     <span class="ui-win__label">Stacks</span>
                     <span class="ui-win__nav"><span class="ui-win__hash">#</span>Swift</span>
                     <span class="ui-win__nav"><span class="ui-win__hash">#</span>TypeScript</span>
@@ -117,11 +117,7 @@
                       <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="1">TO</span><span class="ui-win__who">TouchyOS</span><span class="ui-win__sub">Swift</span><span class="ui-win__st" data-st>Open</span><span class="ui-win__age">2026</span></li>
                       <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="3">RE</span><span class="ui-win__who">Ride expenses</span><span class="ui-win__sub">TypeScript</span><span class="ui-win__st" data-st>Open</span><span class="ui-win__age">2025</span></li>
                       <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="4">AI</span><span class="ui-win__who">Summarizer</span><span class="ui-win__sub">TypeScript</span><span class="ui-win__st" data-st>Open</span><span class="ui-win__age">2025</span></li>
-                      <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="2">SC</span><span class="ui-win__who">Scraper</span><span class="ui-win__sub">TypeScript</span><span class="ui-win__st" data-st>Open</span><span class="ui-win__age">2025</span></li>
-                      <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="5">AQ</span><span class="ui-win__who">Aqua Nova</span><span class="ui-win__sub">Expo</span><span class="ui-win__st is-done" data-st>Read</span><span class="ui-win__age">2025</span></li>
-                      <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="3">SA</span><span class="ui-win__who">Schedule app</span><span class="ui-win__sub">React</span><span class="ui-win__st is-done" data-st>Read</span><span class="ui-win__age">2025</span></li>
                       <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="1">CL</span><span class="ui-win__who">Corporate page</span><span class="ui-win__sub">React</span><span class="ui-win__st is-done" data-st>Read</span><span class="ui-win__age">2025</span></li>
-                      <li class="ui-win__row" data-step><span class="ui-avatar" data-tone="4">TS</span><span class="ui-win__who">TouchyOS tests</span><span class="ui-win__sub">Swift</span><span class="ui-win__st is-done" data-st>Read</span><span class="ui-win__age">2026</span></li>
                     </ul>
                   </div>
                 </div>
@@ -254,70 +250,26 @@
     </div></div>
   </section>
 
-  <section class="section case" id="scraper" style="--h: 1" aria-labelledby="scraper-h">
-    <div class="wrap"><div class="grid grid--top" data-reveal>
-      <div class="span-5 case-copy" data-reveal>
-        <h2 id="scraper-h">Chrome scraper extension</h2>
-        <p class="t-lead">A Chrome extension that pulls images, text and links from the current page.</p>
-        <p class="case-line">Browser scripts pass scraped pages to a Python service that stores them.</p>
-        <p class="stack"><span>TypeScript</span><span>Chrome Extensions API</span><span>Python</span></p>
-        <p class="t-small muted">Personal project · 2025</p>
-        <a class="link" href="https://github.com/edonado2/web-scrapping-chrome-extension">Read source</a>
-      </div>
-      <div class="span-6 start-7">
-        <div class="ui ui-panel ui-code case-code" data-reveal role="img" aria-label="Python excerpt from the scraper Flask service" data-ly-steps="500" data-ly-hold="1000">
-          <div class="ui-code__tabs"><span class="ui-code__tab is-on"><i class="ui-code__lang">PY</i>server/app.py</span></div>
-          <pre class="ui-code__pre"><code><span class="ui-code__ln"><span class="k">from</span> flask <span class="k">import</span> Flask, request, jsonify</span>
-<span class="ui-code__ln"><span class="k">from</span> flask_cors <span class="k">import</span> CORS</span>
-<span class="ui-code__ln">app = <span class="f">Flask</span>(__name__)</span>
-<span class="ui-code__ln"><span class="f">CORS</span>(app)</span>
-<span class="ui-code__ln">@app.<span class="f">route</span>(<span class="s">'/scrape'</span>, methods=[<span class="s">'POST'</span>])</span>
-<span class="ui-code__ln"><span class="k">def</span> <span class="f">scrape</span>():</span>
-<span class="ui-code__ln">    data = request.json</span>
-<span class="ui-code__ln">    title = data.<span class="f">get</span>(<span class="s">'title'</span>)</span>
-<span class="ui-code__ln">    body_text = data.<span class="f">get</span>(<span class="s">'bodyText'</span>)</span>
-<span class="ui-code__ln">    images = data.<span class="f">get</span>(<span class="s">'images'</span>, [])</span>
-<span class="ui-code__ln">    headers = data.<span class="f">get</span>(<span class="s">'headers'</span>, [])</span>
-<span class="ui-code__ln">    links = data.<span class="f">get</span>(<span class="s">'links'</span>, [])</span>
-<span class="ui-code__ln">    <span class="k">return</span> jsonify(response)</span></code></pre>
-        </div>
-      </div>
-    </div></div>
-  </section>
-
   <section class="section" id="projects" style="--h: 1" aria-labelledby="projects-h">
     <div class="wrap"><div class="grid grid--top" data-reveal>
       <div class="span-5 case-copy" data-reveal>
-        <h2 id="projects-h">Other apps</h2>
-        <p class="t-lead">Three smaller builds: an Expo app with location and payment screens, a React and Node appointment manager, and a corporate landing page.</p>
+        <h2 id="projects-h">Another app</h2>
+        <p class="t-lead">A corporate landing page built with Next.js and a validated contact form.</p>
         <ul class="other-list" data-ly-steps="500" data-ly-hold="1000">
-          <li data-step><a class="link" href="https://github.com/edonado2/aqua-nova">Aqua Nova</a></li>
-          <li data-step><a class="link" href="https://github.com/edonado2/schedule-app">Schedule app</a></li>
           <li data-step><a class="link" href="https://github.com/edonado2/corporate-landing-page">Corporate landing page</a></li>
         </ul>
       </div>
       <div class="span-6 start-7">
-        <div class="ui ui-panel ui-code case-code" data-reveal role="img" aria-label="TypeScript excerpt from Aqua Nova search.tsx" data-ly-steps="500" data-ly-hold="1000">
-          <div class="ui-code__tabs"><span class="ui-code__tab is-on"><i class="ui-code__lang">TS</i>app/search.tsx</span></div>
-          <pre class="ui-code__pre"><code><span class="ui-code__ln"><span class="k">import</span> React { useState, useEffect } <span class="k">from</span> <span class="s">'react'</span>;</span>
-<span class="ui-code__ln"><span class="k">import</span> * <span class="k">as</span> Location <span class="k">from</span> <span class="s">'expo-location'</span>;</span>
-<span class="ui-code__ln"><span class="k">interface</span> PlacePrediction {</span>
-<span class="ui-code__ln">  place_id: <span class="k">number</span>;</span>
-<span class="ui-code__ln">  display_name: <span class="k">string</span>;</span>
-<span class="ui-code__ln">  type: <span class="k">string</span>;</span>
-<span class="ui-code__ln">}</span>
-<span class="ui-code__ln"><span class="k">export default function</span> <span class="f">SearchScreen</span>() {</span>
-<span class="ui-code__ln">  <span class="k">const</span> [searchQuery, setSearchQuery] = <span class="f">useState</span>(<span class="s">''</span>);</span>
-<span class="ui-code__ln">  <span class="k">const</span> [destination, setDestination] = <span class="f">useState</span>(<span class="s">''</span>);</span>
-<span class="ui-code__ln">  <span class="k">const</span> [isLoading, setIsLoading] = <span class="f">useState</span>(<span class="k">false</span>);</span>
-<span class="ui-code__ln">  <span class="k">const</span> [predictions, setPredictions] = <span class="f">useState</span>([]);</span>
-<span class="ui-code__ln">  <span class="k">const</span> router = <span class="f">useRouter</span>();</span>
-<span class="ui-code__ln">  <span class="f">useEffect</span>(() =&gt; {</span>
-<span class="ui-code__ln">    <span class="f">getCurrentLocation</span>();</span>
-<span class="ui-code__ln">  }, []);</span>
-<span class="ui-code__ln"></span>
-<span class="ui-code__ln">  <span class="k">const</span> <span class="f">getCurrentLocation</span> = <span class="k">async</span> () =&gt; {</span>
-<span class="ui-code__ln">    <span class="k">try</span> {</span></code></pre>
+        <div class="ui ui-panel ui-code case-code" data-reveal role="img" aria-label="TypeScript excerpt from the corporate landing page ContactForm.tsx" data-ly-steps="500" data-ly-hold="1000">
+          <div class="ui-code__tabs"><span class="ui-code__tab is-on"><i class="ui-code__lang">TS</i>ContactForm.tsx</span></div>
+          <pre class="ui-code__pre"><code><span class="ui-code__ln"><span class="k">const</span> contactSchema = z.<span class="f">object</span>({</span>
+<span class="ui-code__ln">  name: z.<span class="f">string</span>().<span class="f">min</span>(<span class="s">2</span>, <span class="s">'Name must be at least 2 characters'</span>),</span>
+<span class="ui-code__ln">  email: z.<span class="f">string</span>().<span class="f">email</span>(<span class="s">'Please enter a valid email address'</span>),</span>
+<span class="ui-code__ln">  company: z.<span class="f">string</span>().<span class="f">optional</span>(),</span>
+<span class="ui-code__ln">  phone: z.<span class="f">string</span>().<span class="f">optional</span>(),</span>
+<span class="ui-code__ln">  message: z.<span class="f">string</span>().<span class="f">min</span>(<span class="s">10</span>, <span class="s">'Message must be at least 10 characters'</span>),</span>
+<span class="ui-code__ln">});</span>
+<span class="ui-code__ln"><span class="k">type</span> ContactFormValues = z.<span class="f">infer</span>&lt;<span class="k">typeof</span> contactSchema&gt;;</span></code></pre>
         </div>
       </div>
     </div></div>
@@ -340,7 +292,7 @@
           <p class="footer__lede">React, Node.js and Swift. Venezuela, open to remote.</p>
         </div>
         <div class="span-2 footer__col"><h3>Pages</h3><ul><li><a href="#work">Work</a></li><li><a href="#approach">Approach</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Projects</h3><ul><li><a href="#work">Featured</a></li><li><a href="#projects">Other apps</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Projects</h3><ul><li><a href="#work">Featured</a></li><li><a href="#projects">Another app</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Contact</h3><ul><li><a href="mailto:ernestodonado18@gmail.com">Email me</a></li><li><a href="https://github.com/edonado2">See GitHub</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Source</h3><ul><li><a href="https://github.com/edonado2/touchy-os">TouchyOS</a></li><li><a href="https://github.com/edonado2/ai-document-sumarizer">Summarizer</a></li></ul></div>
       </div>

@@ -21,7 +21,7 @@ label: Approach
 statement: Most of this work runs in the browser: React and TypeScript for the interface, Node.js and a database behind it. When the problem lives on a Mac, I write Swift and AppKit.
 
 Section: Selected work
-lead: Four projects. Every panel is code from the repository.
+lead: Three projects. Every panel is code from the repository.
 
 Project: TouchyOS
 summary: A macOS menu-bar app for touchscreen MacBooks.
@@ -44,15 +44,8 @@ stack: TypeScript, React, Node.js, OpenAI API, Gemini API
 status: Personal project
 action: Read source
 
-Project: Chrome scraper extension
-summary: A Chrome extension that pulls images, text and links from the current page.
-line: Browser scripts pass scraped pages to a Python service that stores them.
-stack: TypeScript, Chrome Extensions API, Python
-status: Personal project
-action: Read source
-
 Section: Other projects
-lead: Three smaller builds: an Expo app with location and payment screens, a React and Node appointment manager, and a corporate landing page.
+lead: A corporate landing page built with Next.js and a validated contact form.
 
 Section: Contact
 heading: Work together
