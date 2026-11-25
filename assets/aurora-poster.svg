@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f5f7"/>
+      <stop offset="0.55" stop-color="#eef3e9"/>
+      <stop offset="1" stop-color="#f5f5f7"/>
+    </linearGradient>
+    <linearGradient id="ribbon1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b7d99a" stop-opacity="0"/>
+      <stop offset="0.32" stop-color="#b7d99a" stop-opacity="0.42"/>
+      <stop offset="0.7" stop-color="#9ecb82" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#b7d99a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ribbon2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#9ecb82" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#c3dfa9" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#b7d99a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.62" cy="0.32" r="0.55">
+      <stop offset="0" stop-color="#cfe6b5" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#cfe6b5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#ground)"/>
+  <rect width="1200" height="760" fill="url(#glow)"/>
+  <g filter="url(#soft)">
+    <path d="M-120 520 C 180 250, 330 610, 620 300 S 1020 140, 1320 380 L 1320 540 C 1010 300, 880 520, 620 470 S 220 760, -120 640 Z" fill="url(#ribbon1)"/>
+    <path d="M-120 300 C 160 520, 420 130, 700 350 S 1050 620, 1320 260 L 1320 120 C 1040 440, 820 180, 620 230 S 180 560, -120 200 Z" fill="url(#ribbon2)"/>
+    <path d="M-120 610 C 260 430, 460 700, 760 480 S 1080 350, 1320 520 L 1320 760 L -120 760 Z" fill="url(#ribbon1)" opacity="0.5"/>
+  </g>
+</svg>

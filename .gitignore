@@ -1,0 +1,10 @@
+.DS_Store
+*.log
+.impeccable/
+.taste-skill/
+.superpowers/
+graphify-out/
+shots/
+docs/superpowers/
+.probe-*
+.visual-test.out
